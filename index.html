@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <h2 style="text-align: center" id="count">0</h2>
+    <div style="display: flex; justify-content: center">
+      <button id="addCount" type="button">+1</button>
+      <button id="initCount" type="button">0</button>
+      <button id="subCount" type="button">-1</button>
+    </div>
+  </body>
+  <script>
+    let count = document.getElementById("count");
+    const addFunc = document.getElementById("addCount");
+    const initFunc = document.getElementById("initCount");
+    const subFunc = document.getElementById("subCount");
+
+    addFunc.onclick = () => {
+      let temp = parseInt(count.innerText);
+      count.innerText = temp + 1;
+    };
+
+    initFunc.onclick = () => {
+      count.innerText = 0;
+    };
+
+    subFunc.onclick = () => {
+      let temp = parseInt(count.innerText);
+      count.innerText = temp - 1;
+    };
+  </script>
+</html>
